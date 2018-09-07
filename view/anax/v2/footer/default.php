@@ -9,6 +9,10 @@ namespace Anax\View;
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());
 
+$cYear = date("Y");
+
 ?>
 
-FOOTER
+Copyright &copy; <a class="footer-link" target="_blank" href="https://github.com/SpaceLenore">SpaceLenore</a>
+<br>
+<?= $cYear ?>

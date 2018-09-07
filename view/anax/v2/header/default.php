@@ -12,6 +12,8 @@ namespace Anax\View;
 ?>
 
 <div class="header">
-    <img class="header-logo" src="<?= asset("img/leaf.jpg") ?>" alt="Logo">
-    HEADER
+    <div class="header-content">
+        <img class="header-image" src="image/profile.jpeg" alt="A picture of a fox">
+        <h1 class="header-title">Me-Sida</h1>
+    </div>
 </div>

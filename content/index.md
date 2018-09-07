@@ -1,25 +1,21 @@
 ---
-title: "Min fina titel"
+title: "Hem"
 ---
 Min me-sida i kursen oophp
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+Välkommen, detta är den Obligatoriska me-sidan för mig i kursen oophp.
 
-[FIGURE src="image/me.jpg?w=500" caption="Bild på mig"]
+[FIGURE src="image/ChernobylFox2.jpg?w=500" caption="Bild på en räv i Chernobyl"]
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+Detta blir den första kursen på läsåret och hösten närmar sig. Jag ser fram emot
+höstmånaderna och bristen på c-vitamin. Eller ja, inte rikigt. De bra delarna av
+hösten iallafall. Mörka morgornar, se solnedgången vid 17 på studentbryggan. Varm
+choklad och bröd.
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+GrillCon Höst är det snart dags för, det blir också kul. När
+vi får mindre sol så får vi även bättre mottagning på kortvågsbandet så vi kan
+höra främmande radiosändningar. Om du fortfarande läser detta så gör du nog inte
+det frivilligt, beklagar. Nåväl, här är slutet på min lilla text.
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
-
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+/Lenore
