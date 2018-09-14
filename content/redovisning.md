@@ -37,8 +37,25 @@ TIL: Anax view/layout struktur. Nice.
 Kmom02
 -------------------------
 
-Här är redovisningstexten
+Att överföra 'Gissa mitt nummer' var lite av en process. Det krävdes att jag redigerade bland annat composer.json och uppdaterade
+navbar config-filen. Jag behövde omstrukturera en del av spelet men med hjälp
+av Mos videogenomgång och artiklar så gick det bra efter lite trial and error.
 
+Att jämföra UML och phpDocumentor är inte helt rättvist. UML-diagram är perfekta
+när man ska bygga ihop något utifrån en beskrivning. Då ser man hur allt ska sitta ihop
+och vad som ska ärva av vem. Man kan säga att det fungerar bra som en ritning. phpDocumentor däremot
+genereras utifrån kommentarer av kod som redan är skriven. Detta innebär att den visar exakt vad som finns
+var. phpDocumentor passar bättre när man redan har skrivit koden och behöver gå igenom den igen.
+Jag gillar principen att kunna autogenerera dokumentation för mitt projekt och att ha det via
+make-filen är riktigt praktiskt.
+
+Att skriva koden utanför ramverket var definitivt enklare. Däremot så föredrar resultatet när man gör det
+i ramverket. Det blir mycket snyggare och blir en del av sidan. Det är ett bra sätt att integrera logik
+och något dynamiskt i sin sida trots att det bygger på ett ramverk. Däremot om du behöver ett system som tar
+upp 100% av sidan och inte innehåller något annat så är det självklart att man måste skriva det utanför ramverket.
+Förhoppningsvis ska man inte behöva det över huvud taget.
+
+TIL: egen php-kod dynamiskt i ramverket.
 
 
 Kmom03
