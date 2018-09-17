@@ -1,5 +1,7 @@
 <?php
+
 namespace SpaceLenore\Guess;
+
 ?>
         <h1>Guess the number (POST)</h1>
         <form action="" method="POST">

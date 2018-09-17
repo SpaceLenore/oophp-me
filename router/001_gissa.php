@@ -29,7 +29,7 @@ $app->router->get("gissa/get", function () use ($app) {
 /**
 * Guess the number using POST
 */
-$app->router->any(["get", "post"],"gissa/post", function () use ($app) {
+$app->router->any(["get", "post"], "gissa/post", function () use ($app) {
     include __DIR__ . "/../htdocs/index_post_inside.php";
 
     $title = "Gissa nummer POST";
@@ -51,7 +51,7 @@ $app->router->any(["get", "post"],"gissa/post", function () use ($app) {
 /**
 * Guess the number using SESSION
 */
-$app->router->any(["get", "post"],"gissa/session", function () use ($app) {
+$app->router->any(["get", "post"], "gissa/session", function () use ($app) {
     include __DIR__ . "/../htdocs/index_session_inside.php";
 
     $title = "Gissa nummer SESSION";

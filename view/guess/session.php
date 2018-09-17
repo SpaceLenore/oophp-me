@@ -1,5 +1,7 @@
 <?php
+
 namespace SpaceLenore\Guess;
+
 ?>
     <body>
         <h1>Guess the number (SESSION)</h1>
