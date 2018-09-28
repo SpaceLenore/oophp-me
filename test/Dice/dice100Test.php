@@ -42,14 +42,14 @@ class DiceTest extends TestCase
     {
         $tmpGame = new Game();
 
-        $this->assertEquals(0, $tmpGame->aiTurn(-1));
+        $this->assertInternalType("int", $tmpGame->aiTurn(-1));
     }
 
-    public function testAiTurnFirstRoll()
+    public function testAiTurnRoll()
     {
         $tmpGame = new Game();
 
-        $this->assertInternalType("int", $tmpGame->aiTurn(11));
+        $this->assertInternalType("int", $tmpGame->aiTurn());
     }
 
     public function testPlayerGetName()

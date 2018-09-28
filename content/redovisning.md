@@ -61,9 +61,55 @@ TIL: egen php-kod dynamiskt i ramverket.
 Kmom03
 -------------------------
 
-Här är redovisningstexten
 
+    Har du tidigare erfarenheter av att skriva kod som testar annan kod?
 
+    Hur ser du på begreppen enhetstestning och att skriva testbar kod?
+
+    Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.
+
+    Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
+
+    Hur väl lyckades du testa tärningsspelet 100?
+
+    Vilken är din TIL för detta kmom?
+
+I detta kursmoment började vi med enhetstestning, det är något vi har gjort tidigare i oopython-kursen.
+
+Att skriva enhetsteseter är ganska bra tycker jag. Då vet man att all kod mer eller mindre fungerar.
+Det är förvånansvärt roligt att göra (än så länge) eftersom vi använder oss av phpunit.
+Då får vi progress-bars och procent för hur bra kodtäckning vi har, Det är väldigt motiverande.
+I vissa utfall är min kod inte helt testbar. Jag var till exempel tvungen att skriva om en
+del från en if-sats till att få turnary operator för att kunna täcka den delen trots
+slumpmässiga tärningsslag. Jag behövde även bygga om en del av ai funktionen för att kunna
+testa den.
+
+De testerna jag har skrivit är s.k. white-box tester. Detta innebär att jag har testat
+interna funktioner och strukturer av programmet med full tillgång till koden.
+Black-box tester är då motsatsen där koden inte är tillgänglig. Då testar vi programmets
+entry-points och ser vad vi får för svar och kontrollerar att det uppnår våra förväntningar
+baserat på våra features. Kort och gott kan det beskrivas som att vi stoppar in ett värde
+i en magisk låda och ser om vad den spottar ut är vad vi väntade oss.
+Grey-box tester är då givetvis en kombination av de båda. Där testar man både de interna komponenterna
+och de hela programmet i helhet. Detta kan bland annat hjälpa till att hitta fel-implementerade
+funktioner.
+
+För mig tog tärningsuppgiften förvånansvärt lång tid. Först skissade jag upp vilka klasser jag
+ville ha och vad de skulle göra. Dock gjode jag inte ett UML-diagram än då saker och ting
+enkelt kan förändras, jag ansåg att en skiss skulle räcka för att kunna skapa det formella
+diagrammet när jag var färdig. Därefter började jag skapa de olika klasserna, detta gick
+bra och helt utan problem. Sen var jag dock tvungen att börja bygga en sida som hanterade
+user input och session och massa sådant. Samtidigt som jag testade och byggde upp den sidan
+så behövde det samspela med ramverket. Detta blev för mycket i ett moment så jag valde att
+skriva all kod utanför ramverket till en början. Det var inte helt lätt och tog mer tid än
+väntat men jag lyckades genomföra det. Därefter så behövde jag intergrera min kod med ramverket.
+Det kändes lite osäkert var jag skulle börja men när jag kom igång så gick det riktigt bra och
+var riktigt enkelt.
+
+Min kodtäckning för tärningsspelet 100 är 100% och täcker samtliga klasser.
+Detta innefattar alltså inte index filen som sköter en del user-logik.
+
+TIL: unit testing med phpunit och att gröna progress-bars och statistik är väldigt motiverande.
 
 Kmom04
 -------------------------

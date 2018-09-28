@@ -60,18 +60,15 @@ class Game
 
     public function aiTurn($currentTmpScore = 0)
     {
-        //if we lost
-        if ($currentTmpScore == -1) {
-            return 0;
-        } elseif ($currentTmpScore == 0) {
-            //first roll
-            $thisRoll = $this->rollDices($currentTmpScore);
-            $this->aiTurn($currentTmpScore);
-        } elseif ($currentTmpScore <= 10) {
-            $thisRoll = $this->rollDices($currentTmpScore);
-            $this->aiTurn($currentTmpScore);
-        } else {
-            return $currentTmpScore;
+        while ($currentTmpScore <= 10) {
+            $thisRoll = $this->rollDices();
+            if ($thisRoll == 1 || $currentTmpScore == -1) {
+                $currentTmpScore = 0;
+                break;
+            } else {
+                $currentTmpScore += $thisRoll;
+            }
         }
+        return $currentTmpScore;
     }
 }
