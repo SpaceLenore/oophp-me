@@ -38,4 +38,9 @@ return [
         "url" => "gissa",
         "title" => "Gissa numret integrerat i Anax",
     ],
+    [
+        "text" => "Dice 100",
+        "url" => "dice",
+        "title" => "spela Dice 100",
+    ],
 ];
