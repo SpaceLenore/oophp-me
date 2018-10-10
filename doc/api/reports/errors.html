@@ -68,12 +68,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">40</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">51</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -110,6 +110,10 @@
                                                                                                     <li><a href="#DiceGame/Game.php"><i class="icon-file"></i> DiceGame/Game.php</a></li>
                                                                                                     <li><a href="#Guess/GuessException.php"><i class="icon-file"></i> Guess/GuessException.php</a></li>
                                                                                                     <li><a href="#Guess/Guess.php"><i class="icon-file"></i> Guess/Guess.php</a></li>
+                                                                                                    <li><a href="#DiceGame/HistogramTrait.php"><i class="icon-file"></i> DiceGame/HistogramTrait.php</a></li>
+                                                                                                    <li><a href="#DiceGame/DiceHistogram.php"><i class="icon-file"></i> DiceGame/DiceHistogram.php</a></li>
+                                                                                                    <li><a href="#DiceGame/HistogramInterface.php"><i class="icon-file"></i> DiceGame/HistogramInterface.php</a></li>
+                                                                                                    <li><a href="#DiceGame/HistogramData.php"><i class="icon-file"></i> DiceGame/HistogramData.php</a></li>
                                                                     </ul>
         </div>
 
@@ -429,7 +433,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             DiceGame/Game.php
-                            <small style="float: right;padding-right: 10px;">11</small>
+                            <small style="float: right;padding-right: 10px;">14</small>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -468,13 +472,28 @@
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>61</td>
+                                        <td>60</td>
                                         <td>Argument $currentTmpScore is missing from the Docblock of aiTurn</td>
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>61</td>
+                                        <td>60</td>
                                         <td>No summary for method aiTurn()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>Argument $min is missing from the Docblock of getHistogram</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>Argument $max is missing from the Docblock of getHistogram</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>No summary for method getHistogram()</td>
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
@@ -489,7 +508,7 @@
                                                                     <tr>
                                         <td>error</td>
                                         <td>14</td>
-                                        <td>No summary for property $ai</td>
+                                        <td>No summary for property $aiPlayer</td>
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
@@ -572,6 +591,130 @@
                             </table>
                         </div>
                                     </div>
+                            <div class="package-contents">
+                                            <a name="DiceGame/HistogramTrait.php" id="DiceGame/HistogramTrait.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            DiceGame/HistogramTrait.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $hist</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="DiceGame/DiceHistogram.php" id="DiceGame/DiceHistogram.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            DiceGame/DiceHistogram.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="DiceGame/HistogramInterface.php" id="DiceGame/HistogramInterface.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            DiceGame/HistogramInterface.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="DiceGame/HistogramData.php" id="DiceGame/HistogramData.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            DiceGame/HistogramData.php
+                            <small style="float: right;padding-right: 10px;">4</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>26</td>
+                                        <td>No summary for method getMin()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>31</td>
+                                        <td>No summary for method getMax()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>36</td>
+                                        <td>No summary for method getSerie()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
                     </div>
     </section>
 
@@ -613,7 +756,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on September 28th, 2018 at 13:00.
+                    on October 10th, 2018 at 13:33.
                 </section>
             </section>
         </section>
