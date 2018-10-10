@@ -69,7 +69,7 @@ class DiceTest extends TestCase
     public function testPlayerAddScore()
     {
         $tmpPlayer = new Player(42);
-        $newScore = $tmpPlayer->addScore(1);
+        $tmpPlayer->addScore(1);
         $this->assertEquals(43, $tmpPlayer->getScore());
     }
 }
