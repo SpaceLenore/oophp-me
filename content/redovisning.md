@@ -61,19 +61,6 @@ TIL: egen php-kod dynamiskt i ramverket.
 Kmom03
 -------------------------
 
-
-    Har du tidigare erfarenheter av att skriva kod som testar annan kod?
-
-    Hur ser du på begreppen enhetstestning och att skriva testbar kod?
-
-    Förklara kort begreppen white/grey/black box testing samt positiva och negativa tester, med dina egna ord.
-
-    Berätta om hur du löste uppgiften med Tärningsspelet 100, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
-
-    Hur väl lyckades du testa tärningsspelet 100?
-
-    Vilken är din TIL för detta kmom?
-
 I detta kursmoment började vi med enhetstestning, det är något vi har gjort tidigare i oopython-kursen.
 
 Att skriva enhetsteseter är ganska bra tycker jag. Då vet man att all kod mer eller mindre fungerar.
@@ -114,9 +101,27 @@ TIL: unit testing med phpunit och att gröna progress-bars och statistik är vä
 Kmom04
 -------------------------
 
-Här är redovisningstexten
+Trait och interface är egentligen logiskt och jag förstår det i teorin. Det är ganska smart faktiskt,
+ett Trait är ungefär som att ärva av en klass och ett interface är en kontroll att klassen som använder Trait:et
+faktistk har alla funktioner den ska. Det innebär att ingen funktion som borde implementeras inte lämnas odefinierad.
+Med det sagt så tenderar det att bli ganska komplicerat när man väl ska använda det och vi redan har massa filer och nu
+får nästan dubbelt så mycket. 7/10 i teorin, bara 4/10 i praktiken, alldeles för lätt att det blir trassligt.
 
+Jag valde att inte ge mitt AI ett spelberoende utan istället vara kall och beräknande. Bättre än oss helt enkelt.
+Mitt AI strävar slår så att den uppnår minst 15 poäng per runda. Detta är lite av en sweet-spot när man kör med en tärning.
+Om det hade kört mer riskabelt så hade det oftare slagit 1, hade det kört försiktigare så hade det varit alldeles för svagt.
+Det kanske inte är det mest avancerade AI:t men det har fördelen att inte tänka som en människa. Med en så dålig slumpgenerator
+så är det dåligt att slå för mycket så AI:t håller tillbaka där en människa skulle sagt *bara ett slag till!*
 
+Trots att jag har haft problem med att intergrera Histogramet i ramverket så måste jag ändå säga att jag verkligen gillar
+hur anax Session och Request fungerar. De är smidiga att använda och har bra funktioner så som `session->get($key, "no value")`
+vilket som i princip är en väldigt fint förkortad turnary-operator.
+
+Jag är nöjd med hur väl jag lyckades skriva enhetstester inuti ramverket. Jag testar alla mina filer i src/DiceGame.
+För att testa mitt Trait fick jag se till att alla funktioner i mitt trait var implementerade och publikt åtkomna i mina klasser
+eftersom att man inte kan testa traits direkt. Jag har 100% kodtäckning på alla mina filer.
+
+TIL: Anax Session och Request
 
 Kmom05
 -------------------------

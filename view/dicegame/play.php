@@ -14,6 +14,8 @@
     AI: <?= $aiName ?><br>
     score: <?= $aiScore ?>
 </div>
+<hr>
+<?= $histogram ?>
 <hr id="game">
 <div class="actions">
     <?= $msg ?><?= $tmpsc ?><br>

@@ -72,11 +72,4 @@ class DiceTest extends TestCase
         $newScore = $tmpPlayer->addScore(1);
         $this->assertEquals(43, $tmpPlayer->getScore());
     }
-
-    public function testGetLastRoll()
-    {
-        $tmpDice = new Dice();
-
-        $this->assertEquals(null, $tmpDice->getLastRoll());
-    }
 }

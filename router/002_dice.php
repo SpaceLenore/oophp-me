@@ -19,7 +19,8 @@ $app->router->any(["get", "post"], "dice", function () use ($app) {
         "aiScore" => $_SESSION["aiScore"],
         "turn" => $_SESSION["turn"],
         "msg" => $msg,
-        "tmpsc" => $tmpsc
+        "tmpsc" => $tmpsc,
+        "histogram" => $histogram
     ];
 
     $app->page->add("dicegame/play", $data);

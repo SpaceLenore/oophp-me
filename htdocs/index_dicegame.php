@@ -2,24 +2,24 @@
 
 namespace SpaceLenore\DiceGame;
 
+$request = new \Anax\Request\Request();
+$session = new \Anax\Session\Session();
+
+
 include(__DIR__ . "/config.php");
 
-if (isset($_GET["destroy"]) || isset($_POST["destroy"])) {
-    $_SESSION = [];
-    session_destroy();
-    session_name("sessionOne");
-    session_start();
+if ($request->getPost("destroy")|| $request->getGet("destroy")) {
+    $session->destroy();
+    header('Location: /dice');
 }
 
-if (isset($_SESSION["playerScore"])) {
-    // $player = $_SESSION["player"];
-    $playerName = $_SESSION["playerName"];
-    $playerScore = $_SESSION["playerScore"];
-    // $ai = $_SESSION["ai"];
-    $aiName = $_SESSION["aiName"];
-    $aiScore = $_SESSION["aiScore"];
-    $turn = $_SESSION["turn"];
-    $game = new Game($playerScore, $aiScore);
+if ($session->has("playerScore")) {
+    $playerName = $session->get("playerName");
+    $playerScore = $session->get("playerScore");
+    $aiName = $session->get("aiName");
+    $aiScore = $session->get("aiScore");
+    $turn = $session->get("turn");
+    $game = $session->get("game");
     $ai = $game->getAI();
     $player = $game->getPlayer();
 } else {
@@ -34,27 +34,28 @@ if (isset($_SESSION["playerScore"])) {
 }
 
 $msg = "score for this turn: ";
-$tmpsc = isset($_SESSION["tmpScore"]) ? $_SESSION["tmpScore"] : 0;
+$tmpsc = $session->get("tmpScore", 0);
+$histogram = $game->getHistogram();
 
 //Player Turn
-if (!isset($_POST["aiplay"])) {
-    if (isset($_POST["roll"])) {
+if (!$request->getPost("aiplay")) {
+    if ($request->getPost("roll")) {
         $roll = $game->rollDices();
         if ($roll == -1) {
             $msg = "you rolled a 1.";
             $tmpsc = 0;
-            $_SESSION["tmpScore"] = 0;
+            $session->set("tmpScore", 0);
             $turn = false;
         } else {
             $tmpsc += $roll;
         }
-        $_SESSION["tmpScore"] = $tmpsc;
-    } elseif (isset($_POST["save"])) {
+        $session->set("tmpScore", $tmpsc);
+    } elseif ($request->getPost("save")) {
         $playerScore += $tmpsc;
         $tmpsc = 0;
-        $_SESSION["tmpScore"] = 0;
+        $session->set("tmpScore", 0);
         $turn = false;
-        $_SESSION["playerScore"] = $playerScore;
+        $session->set("playerScore", $playerScore);
     }
 } else {
     //AI roll
@@ -71,8 +72,9 @@ if (!isset($_POST["aiplay"])) {
     $turn = true;
 }
 
-$_SESSION["playerName"] = $playerName;
-$_SESSION["playerScore"] = $playerScore;
-$_SESSION["aiName"] = $aiName;
-$_SESSION["aiScore"] = $aiScore;
-$_SESSION["turn"] = $turn;
+$session->set("game", $game);
+$session->set("playerName", $playerName);
+$session->set("playerScore", $playerScore);
+$session->set("aiName", $aiName);
+$session->set("aiScore", $aiScore);
+$session->set("turn", $turn);

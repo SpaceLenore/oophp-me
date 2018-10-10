@@ -11,7 +11,7 @@ class Game
     //private variables
     private $dices;
     private $player;
-    private $ai;
+    private $aiPlayer;
     public $yourTurn;
 
     /**
@@ -20,9 +20,9 @@ class Game
     */
     public function __construct($playerScore = 0, $aiScore = 0)
     {
-        $this->dices = new \SpaceLenore\DiceGame\DiceHand();
+        $this->dices = new \SpaceLenore\DiceGame\DiceHistogram();
         $this->player = new \SpaceLenore\DiceGame\Player($playerScore, "Dave");
-        $this->ai = new \SpaceLenore\DiceGame\Player($aiScore, "hal2000");
+        $this->aiPlayer = new \SpaceLenore\DiceGame\Player($aiScore, "hal2000");
         $this->yourTurn = true;
     }
 
@@ -41,7 +41,7 @@ class Game
     */
     public function getAI()
     {
-        return $this->ai;
+        return $this->aiPlayer;
     }
 
     public function switchTurn()
@@ -52,10 +52,9 @@ class Game
     public function rollDices()
     {
         //roll dices
-        $this->dices->roll();
-        $dr = $this->dices->values()[0];
-
-        return $dr == 1 ? -1 : $dr;
+        $aRoll = $this->dices->roll();
+        // $dr = $this->dices->values()[0];
+        return $aRoll == 1 ? -1 : $aRoll;
     }
 
     public function aiTurn($currentTmpScore = 0)
@@ -70,5 +69,10 @@ class Game
             }
         }
         return $currentTmpScore;
+    }
+
+    public function getHistogram(int $min = null, int $max = null)
+    {
+        return $this->dices->printHistogram($min, $max);
     }
 }

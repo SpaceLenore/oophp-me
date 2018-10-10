@@ -1,0 +1,82 @@
+<?php
+
+namespace SpaceLenore\DiceGame;
+
+/**
+* A trait implementing a historgram
+*/
+trait HistogramTrait
+{
+    /**
+    * @var array $serie The dice rolls stored in order
+    */
+    private $serie = [];
+    private $hist = [];
+
+    /**
+    * Get the $serie array
+    *
+    * @return array containing the serie
+    */
+    public function getHistogramSerie()
+    {
+        return $this->serie;
+    }
+
+    /**
+     * Get min value for the histogram.
+     *
+     * @return int with the min value.
+     */
+    public function getHistogramMin()
+    {
+        return 1;
+    }
+
+
+
+    /**
+     * Get max value for the histogram.
+     *
+     * @return int with the max value.
+     */
+    public function getHistogramMax()
+    {
+        return max($this->serie);
+    }
+
+    /**
+     * Print out the histogram, default is to print out only the numbers
+     * in the serie, but when $min and $max is set then print also empty
+     * values in the serie, within the range $min, $max.
+     *
+     * @param int $min The lowest possible integer number.
+     * @param int $max The highest possible integer number.
+     *
+     * @return string representing the histogram.
+     */
+    public function printHistogram(int $min = null, int $max = null)
+    {
+        $this->hist = ["1: ", "2: ", "3: ", "4: ", "5: ", "6: "];
+
+        if (isset($min) && isset($max)) {
+            for ($i=0; $i < sizeof($this->serie); $i++) {
+                if ($this->serie[$i] >= $min && $this->serie[$i] <= $max) {
+                    $this->hist[$this->serie[$i]-1] = $this->hist[$this->serie[$i]-1] . "*";
+                }
+            }
+        } else {
+            for ($i=0; $i < sizeof($this->serie); $i++) {
+                $this->hist[$this->serie[$i]-1] = $this->hist[$this->serie[$i]-1] . "*";
+            }
+        }
+
+        $returnString = "";
+
+        foreach ($this->hist as $key) {
+            $returnString = $returnString . $key . "<br>";
+        }
+
+        return $returnString;
+    }
+}
