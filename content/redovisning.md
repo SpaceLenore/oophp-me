@@ -126,7 +126,23 @@ TIL: Anax Session och Request
 Kmom05
 -------------------------
 
-Här är redovisningstexten
+I Detta kursmomentet så har jag gjort CRUD med php-pdo och mysql. Det gick bra och jag gillar
+strukturen med våra views och routes. Det är som en bättre och mer lättanvänd verision av CRUD:en vi gjorde i htmlphp.
+
+Det gick bra att föra in all kod i ramverket, mycket bättre än förra gången. Nästan lättare i ramverket än utanför
+när det blir så tydligt var allting händer. Till exempel så har jag mina GET-routes för olika vyer och en del POST-routes
+som hanterar funktionalitet. Jag har även valt att ha så att när man skapar en ny film så skickar den en POST till samma
+route. Om något av fälten inte är ifyllda så vissas ett felmeddelande och om allt är rätt så skickas det till databasen.
+
+Min slutprodukt är ganska enkel, den har fyra länkar: Visa alla filmer, sök bland filmer, skapa ny film och redigera / ta bort.
+På sidan Redigera / Ta bort så kan man både redigera och ta bort filmer. Man kan dessutom som en liten extra feature
+återställa databasen till sitt ursprungliga skick. Jag känner att jag har en helt okej användarvänlighet och en försiktig design
+utan onödigt många knappar och länkar. Min kodstruktur kunde varit lite bättre då jag inte har implementerat någon
+Controller. Det blir något att göra en annan gång och det skulle förbättra kodstrukturen avsevärt.
+Jag har även sett till att använda PHP:s `htmlentities` för att förhindra xss injections i min databas.
+Man ska inte kasta sten i glashus.
+
+TIL: /regex/ det är grejer det. Borde lära mig det.
 
 
 

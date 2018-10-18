@@ -43,4 +43,9 @@ return [
         "url" => "dice",
         "title" => "spela Dice 100",
     ],
+    [
+        "text" => "Movies",
+        "url" => "movie",
+        "title" => "Movie DB",
+    ],
 ];
